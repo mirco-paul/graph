@@ -15,23 +15,30 @@
 #include <vector>
 
 /**
- * @typedef NodeId
  * 
- * Type for node identifiers. NodeId id is the identifier for the node in Graph::nodes_[id].
+ * @namespace graph
  * 
- **/
-typedef size_t NodeId;
+ */
+namespace graph{
 
-/**
- * @class Graph
- * 
- * Adjacency-lists based class for directed (multi-)graphs.
- * 
- * @tparam T Node type.
- * 
- **/
-template <typename T>
-class Graph {
+    /**
+     * @typedef NodeId
+     * 
+     * Type for node identifiers. NodeId id is the identifier for the node in Graph::nodes_[id].
+     * 
+     **/
+    typedef size_t NodeId;
+
+    /**
+     * @class Graph
+     * 
+     * Adjacency-lists based class for directed (multi-)graphs.
+     * 
+     * @tparam T Node type.
+     * 
+     **/
+    template <typename T>
+    class Graph {
 
     std::vector<T> nodes_;
     std::vector<std::vector<NodeId>> adjacency_lists_;
@@ -121,17 +128,7 @@ class Graph {
          * 
          **/
         void addEdge(const NodeId from, const NodeId to);
-};
+    };
+}
 
 #include "graph.tpp"
-
-/* // "Linked list style", unused for now
-template <typename T>
-struct GraphNode {
-    T data_;
-    std::vector<DAGNode<T>&> next_list_;
-    std::vector<DAGNode<T>&> prev_list_;
-
-    DAGNode(T data) : data_(data) {};
-};
-*/
