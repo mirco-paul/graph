@@ -1,2 +1,2 @@
 # Graph
-Data structure for graphs written in C++
+Data structure for graphs in C++
