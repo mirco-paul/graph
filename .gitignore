@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Don't track documentation for now
+documentation
