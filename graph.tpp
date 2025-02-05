@@ -1,7 +1,7 @@
 namespace graph{
 
-template<typename T>
-Graph<T>::Graph() {}
+    template<typename T>
+    Graph<T>::Graph() {}
 
     template<typename T>
     Graph<T>::Graph(const size_t n) : nodes_(std::vector<T>(n)), adjacency_lists_(std::vector<std::vector<NodeId>>(n)) {}
@@ -58,4 +58,4 @@ Graph<T>::Graph() {}
         backward_adjacency_lists_[to].push_back(from);
     }
 
-}
+}   // namespace graph

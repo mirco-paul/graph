@@ -129,6 +129,6 @@ namespace graph{
          **/
         void addEdge(const NodeId from, const NodeId to);
     };
-}
+}   // namespace graph
 
 #include "graph.tpp"
