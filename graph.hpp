@@ -123,7 +123,7 @@ class Graph {
         void addEdge(const NodeId from, const NodeId to);
 };
 
-#include "../src/graph.tpp"
+#include "graph.tpp"
 
 /* // "Linked list style", unused for now
 template <typename T>
