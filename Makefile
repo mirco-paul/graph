@@ -1,7 +1,7 @@
 .PHONY: test clean
 
-test: test/run_tests.cpp
-	g++ -o test_binary test/run_tests.cpp
+test: 
+	g++ -o test_binary test/run_tests.cpp && ./test_binary
 
 clean:
 	rm -f test_binary
